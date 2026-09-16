@@ -1,0 +1,176 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-6: var(--chart-6);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  /* PETROLAB 自定义语义色 */
+  --color-navy: var(--navy);
+  --color-cyan: var(--cyan);
+  --color-amber: var(--amber);
+  --color-gold: var(--gold);
+  --color-faint: var(--faint);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-blue: var(--blue);
+  --color-text: var(--text);
+  --color-red: var(--red);
+  --color-purple: var(--purple);
+  --color-bg: var(--bg);
+  --color-green: var(--green);
+  --color-success: var(--success);
+  --color-success-bg: var(--success-bg);
+  --color-warning-bg: var(--warning-bg);
+  --color-neutral-bg: var(--neutral-bg);
+  --color-error-bg: var(--error-bg);
+  --color-primary-container: var(--primary-container);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline-variant: var(--outline-variant);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --shadow-card: var(--shadow-card);
+  --shadow-float: var(--shadow-float);
+  --shadow-dialog: var(--shadow-dialog);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --font-sans:
+    'Microsoft YaHei', 'PingFang SC', 'Segoe UI', ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:
+    'Consolas', 'SFMono-Regular', ui-monospace, Menlo, Monaco, monospace;
+  --font-serif:
+    'Noto Serif SC', 'Songti SC', ui-serif, Georgia, serif;
+}
+
+:root {
+  --radius: 0.5rem;
+  /* AI4S Design System V1.0: 朱丹红用于品牌和正式操作。 */
+  --brand-red: #a6191e;
+  --brand-red-deep: #7f1116;
+  --brand-red-soft: #fcebec;
+  --scientific-blue: #2878d0;
+  --compute-cyan: #0788a8;
+  --experiment-green: #168b68;
+  --ai-purple: #6558d3;
+  --background: #f6f7f9;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+  --popover: #ffffff;
+  --popover-foreground: #1f2937;
+  --primary: #a6191e;
+  --primary-foreground: #ffffff;
+  --secondary: #fcebec;
+  --secondary-foreground: #7f1116;
+  --muted: #f8fafc;
+  --muted-foreground: #667085;
+  --accent: #fcebec;
+  --accent-foreground: #7f1116;
+  --destructive: #d92d20;
+  --border: #d9dee7;
+  --input: #d9dee7;
+  --ring: #a6191e;
+  --chart-1: #2878d0;
+  --chart-2: #0788a8;
+  --chart-3: #168b68;
+  --chart-4: #d97706;
+  --chart-5: #6558d3;
+  --chart-6: #d92d20;
+  /* PETROLAB 自定义变量 */
+  --navy: #1f2937;
+  --cyan: #0788a8;
+  --amber: #d97706;
+  --gold: #c99325;
+  --faint: #98a2b3;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --line: #d9dee7;
+  --line-2: #c7ced9;
+  --blue: #2878d0;
+  --text: #1f2937;
+  --red: #d92d20;
+  --purple: #6558d3;
+  --bg: #f6f7f9;
+  --green: #168b68;
+  --success: #168b68;
+  --success-bg: #e9f7f1;
+  --warning-bg: #fff3e0;
+  --neutral-bg: #f5f5f5;
+  --error-bg: #fff0ef;
+  --primary-container: #fcebec;
+  --on-surface-variant: #667085;
+  --outline-variant: #c7ced9;
+  --surface-container: #f8fafc;
+  --surface-container-high: #fcebec;
+  --surface-container-highest: #e7ebf0;
+  --shadow-card: 0 2px 8px rgba(16, 38, 79, 0.04);
+  --shadow-float: 0 4px 12px rgba(16, 38, 79, 0.08);
+  --shadow-dialog: 0 10px 25px rgba(16, 38, 79, 0.12);
+  /* Sidebar */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1f2937;
+  --sidebar-primary: #a6191e;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #fcebec;
+  --sidebar-accent-foreground: #7f1116;
+  --sidebar-border: #d9dee7;
+  --sidebar-ring: #a6191e;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
